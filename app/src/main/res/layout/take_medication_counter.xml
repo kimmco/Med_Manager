@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <com.cokimutai.med_manager.TimeLeftView
+        android:id="@+id/timeLeftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:radius="40dp"
+        app:value="100" />
+
+
+    <TextView
+        android:id="@+id/swallowed_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/timeLeftView"
+        app:layout_constraintLeft_toLeftOf="@+id/timeLeftView"
+        app:layout_constraintRight_toRightOf="@+id/timeLeftView"
+        app:layout_constraintTop_toTopOf="@+id/timeLeftView"
+        app:layout_constraintVertical_bias="0.512"
+        tools:text="99" />
+
+
+</android.support.constraint.ConstraintLayout>

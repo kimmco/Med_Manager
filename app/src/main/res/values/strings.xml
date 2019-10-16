@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Med-Manager</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_add_medication" translatable="false">AddMedication</string>
+    <string name="title_activity_medication_details" translatable="false">MedicationDetails</string>
+
+    <string name="action_search" translatable="false">Search</string>
+    <string name="action_refresh" translatable="false">Refresh</string>
+    <string name="action_edit" translatable="false">Edit</string>
+    <string name="action_delete" translatable="false">Delete</string>
+    <string name="action_set_reminder"
+        translatable="false">Set Reminder</string>
+
+    <string name="action_status" translatable="false">Status</string>
+    <string name="action_without_icon" translatable="false">Without Icon</string>
+    <string name="action_with_icon" translatable="false">With Icon</string>
+    <string name="action_custom" translatable="false">Custom Tab</string>
+    <string name="appwidget_text" translatable="false">EXAMPLE</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="touch_instructions" translatable="false">Touch the glass if you\'ve just taken this medication</string>
+</resources>
