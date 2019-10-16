@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/med_details_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context="com.cokimutai.med_manager.MedDetailsActivity">
+
+    <TextView
+        android:id="@+id/medicine_title"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Panadol"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/to_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
+        android:text="To"
+        android:textColor="#0ef40e"
+        app:layout_constraintStart_toEndOf="@id/from_tv"
+        app:layout_constraintTop_toBottomOf="@id/dosage_value_label_tv"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/from_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:text="From"
+        android:textColor="#df0606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medicine_title"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/from_date_tv"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="12/06/2018"
+        android:textColor="#0ef40e"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_tv"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/to_date_tv"
+        app:layout_constraintEnd_toStartOf="@+id/to_date_tv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/from_date_tv"
+        app:layout_constraintTop_toBottomOf="@+id/to_date_tv"
+        app:layout_constraintVertical_bias="0.462"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/to_date_tv"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="36dp"
+        android:gravity="center_vertical"
+        android:text="30/06/2018"
+        android:textColor="#df0606"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_tv"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/med_desc_tv"
+        android:layout_width="288dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="OOOPS! THIS MEDICATION CAN'T BE FOUND ANYMORE!!!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        android:visibility="visible"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/time_left_view_container"
+        android:layout_width="188dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/med_desc_tv"
+        app:layout_constraintVertical_bias="0.17">
+
+        <ImageButton
+            android:id="@+id/take_medication_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@color/primary_mid_200"
+            android:onClick="incrementSwallowCount"
+            android:src="@drawable/cupe"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            layout="@layout/take_medication_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:visibility="visible"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="@id/take_medication_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/touch_instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/touch_instructions"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_left_view_container"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <TextView
+        android:id="@+id/dosage_label"
+        android:layout_width="67dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="DOSAGE:"
+        app:layout_constraintBottom_toTopOf="@+id/from_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/dosage_value_label_tv"
+        android:layout_width="99dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:text="3 X 2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@id/dosage_label"
+        app:layout_constraintTop_toBottomOf="@+id/medicine_title"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/last_taken_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginBottom="24dp"
+        android:text="[ Last taken : 3hrs ago ]"
+        android:textSize="10sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/touch_instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/time_left_view_container" />
+
+    <TextView
+        android:id="@+id/percentageHolder_tv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/touch_instructions" />
+
+    <TextView
+        android:id="@+id/medTypetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="48dp"
+        android:text="Tablet"
+        app:layout_constraintBottom_toTopOf="@+id/to_date_tv"
+        app:layout_constraintStart_toEndOf="@+id/dosage_value_label_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/info_holder"
+            android:layout_width="305dp"
+            android:layout_height="142dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border_without_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/info_left_view"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="Information"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/right_info_view"
+                app:layout_constraintLeft_toRightOf="@+id/info_left_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
+
+            <View
+                android:id="@+id/right_info_view"
+                android:layout_width="215dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toRightOf="@+id/info"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/medicine_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Medication Name"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/medicine_description_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:fadeScrollbars="true"
+                android:hint="Description"
+                android:inputType="text|textImeMultiLine"
+                android:maxLines="3"
+                android:padding="8dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/medicine_name_edit_text">
+
+            </EditText>
+
+            <Spinner
+                android:id="@+id/spinner_med_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/medicine_description_edit_text"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/schedule_holder"
+            android:layout_width="310dp"
+            android:layout_height="102dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/border_without_top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info_holder">
+
+            <View
+                android:id="@+id/schedule_left_view"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sched_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Schedule Type"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/right_sched_view"
+                app:layout_constraintLeft_toRightOf="@+id/schedule_left_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <View
+                android:id="@+id/right_sched_view"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toRightOf="@+id/sched_type_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/start_date_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:focusable="false"
+                android:hint="Enter Start Day Here"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sched_type_tv">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/date_ends_edit_text"
+                android:layout_width="285dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="8dp"
+                android:focusable="false"
+                android:hint="Enter End Date Here"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_date_edit_text">
+
+            </EditText>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/dosage_holder"
+            android:layout_width="287dp"
+            android:layout_height="241dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_without_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/schedule_holder"
+            app:layout_constraintVertical_bias="0.166">
+
+            <View
+                android:id="@+id/dosage_left_view"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dosage_view_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Dosage"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/right_dosage_view"
+                app:layout_constraintLeft_toRightOf="@+id/dosage_left_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.42" />
+
+            <View
+                android:id="@+id/right_dosage_view"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintLeft_toRightOf="@id/dosage_view_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tablets_number_tv"
+                android:layout_width="73dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="sans-serif"
+                android:text="Tablets"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintTop_toTopOf="@id/dosage_left_view" />
+
+            <NumberPicker
+                android:id="@+id/numberPicker1"
+                android:layout_width="23dp"
+                android:layout_height="112dp"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tablets_number_tv" />
+
+            <TextView
+                android:id="@+id/multiply_by_tv"
+                android:layout_width="76dp"
+                android:layout_height="31dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="X"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/number_of_times_picker"
+                app:layout_constraintHorizontal_bias="0.292"
+                app:layout_constraintLeft_toRightOf="@+id/numberPicker1"
+                app:layout_constraintRight_toLeftOf="@+id/number_of_times_picker"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.604" />
+
+            <TextView
+                android:id="@+id/times_value_tv"
+                android:layout_width="73dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="48dp"
+                android:fontFamily="sans-serif"
+                android:text="Times"
+                android:textSize="16sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/right_dosage_view" />
+
+
+            <NumberPicker
+                android:id="@+id/number_of_times_picker"
+                android:layout_width="20dp"
+                android:layout_height="116dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="84dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/times_value_tv" />
+
+            <TextView
+                android:id="@+id/starting_time"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="48dp"
+                android:layout_weight="1"
+                android:text="Pick Starting Time"
+                android:textColor="#C97CE6"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toRightOf="@+id/numberPicker1"
+                app:layout_constraintTop_toBottomOf="@+id/multiply_by_tv" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+
